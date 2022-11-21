@@ -1,0 +1,11 @@
+<div *ngIf="cubos">
+    <div *ngFor="let cubo of cubos" class="card">
+        <div class="card" style="width: 18rem;">
+            <img src="{{cubo.imagen}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{cubo.nombre}}</h5>
+                <p class="card-text">Modelo: {{cubo.modelo}}, Marca: {{cubo.marca}}</p>
+            </div>
+        </div>
+    </div>
+</div>

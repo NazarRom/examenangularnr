@@ -1,0 +1,10 @@
+<form #formLogin="ngForm" (ngSubmit)="registarUsuario()">
+    <input type="hidden" name="cajaid" #cajaid />
+    <label>Nombre</label><br/>
+    <input type="text" name="cajanombre" #cajanombre /><br/>
+    <label>Email</label><br/>
+    <input type="text" name="cajaemail" #cajaemail /><br/>
+    <label>Password</label><br/>
+    <input type="text" name="cajapass" #cajapass /><br/>
+    <button class="btn btn-success">Registarse</button>
+</form>
