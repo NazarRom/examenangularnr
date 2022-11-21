@@ -14,11 +14,12 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { PerfilService } from './service/perfil.service';
+import { CompraComponent } from './components/compra/compra.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,MenuComponent, DetallesComponent, MarcaComponent, LoginComponent, RegisterComponent, PerfilComponent
+    HomeComponent,MenuComponent, DetallesComponent, MarcaComponent, LoginComponent, RegisterComponent, PerfilComponent, CompraComponent
   ],
   imports: [
     BrowserModule,

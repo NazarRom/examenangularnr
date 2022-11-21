@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Perfil } from 'src/app/model/perfil';
 import { PerfilService } from 'src/app/service/perfil.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -11,7 +12,8 @@ export class RegisterComponent implements OnInit {
   @ViewChild("cajanombre") cajanombre!: ElementRef;
   @ViewChild("cajaemail") cajaemail!: ElementRef;
   @ViewChild("cajapass") cajapass!: ElementRef;
-  constructor(private _service: PerfilService) { }
+  constructor(private _service: PerfilService,
+    private _router: Router) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +25,7 @@ export class RegisterComponent implements OnInit {
     console.log(miperfil);
     this._service.registerUsuario(miperfil).subscribe(res=>{
       console.log(res + "registrado");
+      this._router.navigate(["/perfil"]);
     })
   }
 

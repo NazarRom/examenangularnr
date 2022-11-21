@@ -25,4 +25,11 @@ export class PerfilService {
         return this._http.post(url, json, { headers: header });
 
     }
+
+    getCompra():Observable<any>{
+        var request = "/api/Compra/ComprasUsuario";
+        var url = environment.urlApiCubos + request;
+        return this._http.get(url);
+
+    }
 }
